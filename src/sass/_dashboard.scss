@@ -1,0 +1,20 @@
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  margin: 0px auto;
+  align-items: center;
+  li {
+    position: relative;
+    img {
+      height: 45vw;
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 5vw);
+      width: 10vw;
+    }
+  }
+}

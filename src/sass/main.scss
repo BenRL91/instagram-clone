@@ -1,0 +1,26 @@
+@import "bulma";
+
+// Partial SCSS Imports //
+@import "dashboard";
+@import "add_image";
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 98vw;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}

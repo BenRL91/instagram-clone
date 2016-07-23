@@ -1,0 +1,17 @@
+<div class="add-image-container">
+  <form class="add-image-form" ng-submit="submitImage(image)">
+    <label>
+      Title:
+      <input type="text" name="title" ng-model="image.title">
+    </label>
+    <label>
+      Description:
+      <input type="text" name="description" ng-model="image.description">
+    </label>
+    <label>
+      Image URL:
+      <input type="text" name="source" ng-model="image.source">
+    </label>
+    <button type="submit" name="button">Submit</button>
+  </form>
+</div>

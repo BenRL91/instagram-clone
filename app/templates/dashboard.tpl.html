@@ -1,0 +1,14 @@
+<div class="dashboard-container">
+  <h1 class="title">ImgstaGram</h1>
+  <a ng-href="/#/add">Upload an Image</a>
+  <ul>
+    <li ng-repeat="image in images">
+      <img ng-src="{{ image.source }}" alt="{{ image.description }}">
+      <button ng-click="addLike()" type="button" name="button">Like</button>
+      <!-- <form class="comment-form" ng-submit="submitComment(comment)">
+        <textarea name="comment" placeholder="Leave a comment..." ng-model="image.comment">
+        </textarea>
+      </form> -->
+    </li>
+  </ul>
+</div>
