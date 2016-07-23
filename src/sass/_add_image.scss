@@ -1,13 +1,31 @@
 .add-image-container {
   form {
+    border: 3px solid black;
+    width: 37vw;
     display: flex;
     flex-direction: column;
     height: 60vh;
     justify-content: space-around;
-    margin: 20px auto;
+    margin: 10vw auto;
     align-self: center;
+    h2 {
+      font-size: 2em;
+      align-self: center;
+      margin-top: 1.8vw;
+      margin-bottom: 0px;
+    }
+    input {
+      width: 29vw;
+      align-self: center;
+    }
     label {
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      width: 15vw;
+      align-self: center;
     }
   }
 }
