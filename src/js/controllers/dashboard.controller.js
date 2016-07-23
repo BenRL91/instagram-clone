@@ -3,9 +3,23 @@ function DashboardController($scope, $http, SERVER){
 
   function init(){
     $http.get(SERVER.URL + "imgstaMurrays").then((response)=> {
-      console.log(response);
       $scope.images = response.data;
     })
+  }
+
+  $scope.addLike = (image) => {
+    $http.put(SERVER.URL + "imgstaMurrays/" + image._id, {
+      likes: ++image.likes
+    }).then((response) => {
+    })
+  }
+
+  $scope.getLikes = (currentLikes) => {
+    if(currentLikes > 1 || currentLikes === 0){
+      return "Likes"
+    }else {
+      return "Like"
+    }
   }
 
 }
