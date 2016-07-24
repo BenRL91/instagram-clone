@@ -1,0 +1,27 @@
+<div class="detail-container">
+  <h1 class="title">{{ image.title }}</h1>
+  <div class="image-container">
+    <img
+      ng-src="{{ image.source }}"
+      alt="{{ image.title }}"
+      ng-dblclick="addLike(image)"
+      ng-click="toggleHidden()">
+    <img
+      ng-src="../images/like_icon.png"
+      class="{{ hidden }} liked">
+  </div>
+
+
+  <span>{{ image.likes }} {{ getLikes(image.likes) }}</span>
+  <div class="comments">
+    <form class="comment-form" ng-submit="submitComment(comment)">
+      <textarea ng-model="comment.body" class="comment-field" placeholder="Add a comment..."></textarea>
+      <button type="submit" name="comment-button">Add Comment</button>
+    </form>
+    <ul>
+      <li class="comment" ng-repeat="comment in image.comments track by $index">
+        <p>{{ comment.body }}</p>
+      </li>
+    </ul>
+  </div>
+</div>

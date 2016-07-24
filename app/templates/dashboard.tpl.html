@@ -4,12 +4,10 @@
   <ul>
     <li ng-repeat="image in images">
         <img ng-src="{{ image.source }}" alt="{{ image.description }}">
-        <button ng-click="addLike(image)" type="button" name="button">Like</button>
-        <!-- <form class="comment-form" ng-submit="submitComment(comment)">
-        <textarea name="comment" placeholder="Leave a comment..." ng-model="image.comment">
-      </textarea>
-    </form> -->
-      <a ng-href="/#/image._id"></a>
+          <img
+          class="like-button"
+          ng-click="addLike(image)" ng-src="../images/like_icon.png">
+      <a ng-href="/#/{{image._id}}"></a>
       <span>{{ image.likes }} {{ getLikes(image.likes) }}</span>
     </li>
   </ul>

@@ -2,13 +2,13 @@ function DashboardController($scope, $http, SERVER){
   init();
 
   function init(){
-    $http.get(SERVER.URL + "imgstaMurrays").then((response)=> {
+    $http.get(SERVER.URL).then((response)=> {
       $scope.images = response.data;
     })
   }
 
   $scope.addLike = (image) => {
-    $http.put(SERVER.URL + "imgstaMurrays/" + image._id, {
+    $http.put(SERVER.URL + image._id, {
       likes: ++image.likes
     }).then((response) => {
     })

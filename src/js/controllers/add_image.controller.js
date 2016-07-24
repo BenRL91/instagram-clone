@@ -8,7 +8,7 @@ function AddImageController($scope, $http, SERVER, $state){
   $scope.submitImage = function(imageData){
     imageData.comments = [];
     imageData.likes = 0;
-    $http.post(SERVER.URL + "imgstaMurrays", imageData).then((response) => {
+    $http.post(SERVER.URL, imageData).then((response) => {
       console.log(response);
       $state.go("dashboard")
     })

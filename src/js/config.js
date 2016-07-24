@@ -10,6 +10,11 @@ function config($stateProvider, $urlRouterProvider){
       templateUrl: "templates/add_image.tpl.html",
       controller: "AddImageCtrl"
     })
+    .state("details", {
+      url: "/:id",
+      templateUrl: "templates/detail.tpl.html",
+      controller: "DetailCtrl"
+    })
 
     $urlRouterProvider.otherwise("/")
 }
