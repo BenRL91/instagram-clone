@@ -10,9 +10,8 @@
       ng-src="../images/like_icon.png"
       class="{{ hidden }} liked">
   </div>
-
-
   <span>{{ image.likes }} {{ getLikes(image.likes) }}</span>
+  <button ng-click="deleteImage(image._id)" type="button" name="delete-button">Delete</button>
   <div class="comments">
     <form class="comment-form" ng-submit="submitComment(comment)">
       <textarea ng-model="comment.body" class="comment-field" placeholder="Add a comment..."></textarea>

@@ -1,4 +1,4 @@
-function DetailController ($scope, $http, SERVER, $stateParams){
+function DetailController ($scope, $http, SERVER, $stateParams, $state){
 
   init();
 
@@ -46,7 +46,16 @@ function DetailController ($scope, $http, SERVER, $stateParams){
     $scope.boolean = !$scope.boolean;
     $scope.hidden = $scope.boolean ? "hidden" : "";
   }
+
+  $scope.deleteImage = (imageID) =>{
+    if (window.confirm("Are you sure you want to delete this image?")){
+      $http.delete(SERVER.URL + imageID).then((response) => {
+        console.log(response);
+        $state.go("root.dashboard");
+      })
+    }
+  }
 }
-DetailController.$inject = ["$scope", "$http", "SERVER", "$stateParams"];
+DetailController.$inject = ["$scope", "$http", "SERVER", "$stateParams", "$state"];
 
 export { DetailController };

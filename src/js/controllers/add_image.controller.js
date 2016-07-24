@@ -10,7 +10,7 @@ function AddImageController($scope, $http, SERVER, $state){
     imageData.likes = 0;
     $http.post(SERVER.URL, imageData).then((response) => {
       console.log(response);
-      $state.go("dashboard")
+      $state.go("root.dashboard")
     })
   }
 
