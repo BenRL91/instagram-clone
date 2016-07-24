@@ -12,6 +12,10 @@
 .container {
   width: 98vw;
   margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -24,4 +28,16 @@ a {
 ul {
   list-style: none;
   padding: 0px;
+}
+
+nav {
+  margin-bottom: 3vw;
+  a {
+    margin: 0px 20px;
+  }
+}
+
+footer {
+  
+  margin-top: 3vw;
 }
